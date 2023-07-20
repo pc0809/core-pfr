@@ -42,7 +42,7 @@ def data_read(file):
 
 
 main_data = data_read(
-    "D:\\BlueThinQ\\Streamlit\\streamlit\\Streamlit Apps\\PetFoodAnalyzer\\Data\\data_for_streamlit_reduced_20_07_23.csv")
+    "data_for_streamlit_reduced_20_07_23.csv")
 
 
 
@@ -790,7 +790,7 @@ with best_products:
             # st.write(pivot_df.reindex(sorting_list))
             
             st.dataframe(pivot_df.style.set_properties(**{'color':
-            '#00aaff'}).applymap(lambda x: 'color: grey' if pd.isna(x) else '').hide_index(),
+            '#00aaff'}).applymap(lambda x: 'color: grey' if pd.isna(x) else '').hide(axis = 'index'),
             width=800, use_container_width=True)    
         
     
