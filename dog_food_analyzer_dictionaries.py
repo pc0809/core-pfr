@@ -1497,6 +1497,7 @@ ingredient_and_sub_and_parent_category = {
     "chicken by-product": ["chicken", "animal products"], 
     "chicken byproduct meal": ["chicken", "animal products"], 
     "chicken by-product meal": ["chicken", "animal products"], 
+    "chicken by product meal": ["chicken", "animal products"], 
     "chicken by-product meal (a source of glucosamine and chondroitin sulfate)": ["chicken", "animal products"], 
     "chicken by-product meal (natural source of clucosamine and chondroitin sulfate)": ["chicken", "animal products"], 
     "chicken by-product meal (natural source of glucosamine)": ["chicken", "animal products"], 
