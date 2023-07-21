@@ -739,7 +739,7 @@ with best_products:
             
             ing_df_2_grouped = ing_df_2.groupby(by = ['Product','category'], as_index = False).agg({
                                                                                     'ingredient':
-                                                                                    lambda x : ', '.join(x.unique()})
+                                                                                    lambda x : ', '.join(x.unique())})
             
 
                    
