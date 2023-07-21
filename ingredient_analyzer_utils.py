@@ -188,6 +188,30 @@ def preprocess_ingredients(ing_str):
 
         unprocessed_ing_list_7 = [re.sub(r"(vitamins|minerals)", "", each, flags=re.IGNORECASE).replace(":", "").strip() for each in unprocessed_ing_list_6]
 
+
+
+        if '' in new_product_wise_ingredients:
+            new_product_wise_ingredients.remove('')
+
+        if len(new_product_wise_ingredients) > len(unprocessed_ing_list_7):
+            
+            for unc, clean in replace_dict_for_unprocessed.items():
+                unprocessed_ing_list_7 = [i.replace(unc, clean) for i in unprocessed_ing_list_7]
+            
+            
+            temp_list = [i.split(',') for i in unprocessed_ing_list_7]
+
+            
+            temp_list_2 = []
+            for i in temp_list:
+                
+                temp_list_2.extend(i)
+
+                
+            unprocessed_ing_list_7 = temp_list_2
+            
+            
+            
         # mapping the ingredients with their parent category using ingredient dictionary and storing it in dictionary with its flavor
         mapping_dict = {k:v for k,v in zip(new_product_wise_ingredients, unprocessed_ing_list_7)}
         
